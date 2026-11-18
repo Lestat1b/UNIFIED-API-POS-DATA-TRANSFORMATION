@@ -1,0 +1,5 @@
+# UNIFIED-API-POS-DATA-TRANSFORMATION
+Module 6: Assignment
+In the assignment, I recreated the Fake Trillionaire E-Commerce API and built an ETL pipeline that combines items and orders into a unified database. I first had to verify the source API with curl.exe and confirm that the items returned the original integer IDs. I then changed the unified SQLAlchemy model so sku_id was stored as a string and modified the transformation functions to add the SPTBG-prefix. I recreated the SQLite database so the new schema would take effect. I also had to use an older version of python so the code would work. Which is why I had to use curl.exe and curl.
+
+What was one of the bigger surprises was how important the separation between the source API and transformation layer was. The source data remained unchanged while the ETL process created the new standardized values. My curl tests of the unified API successfully returned values such as "sku_id":"SPTB-1" for items and "sku_id""SPTGB-74" for orders. Through the process, I have a better understanding of ETL transformations, database schemas, REST/SOAP interoperability, and API testing.
